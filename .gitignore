@@ -1,22 +1,37 @@
+# Dependencies
 node_modules/
-target/
-_out/
-gen/
 
+# CAP generated files
+gen/
+target/
+out/
+
+# Local/private CAP configuration
 .cdsrc-private.json
 default-*.json
-*.sqlite
 
-# MTA
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local databases
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+
+# MTA build files
 mta_archives/
-*_mta_build_tmp
+*_mta_build_tmp/
 *.mtar
 
-# Other
+# macOS
 .DS_Store
 
-# @cap-js/cds-typer
-@cds-models
+# cds-typer generated models
+@cds-models/
 
-# auto generated wildcard
-.env
+# Logs
+*.log
+npm-debug.log*
