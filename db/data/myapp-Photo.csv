@@ -1,0 +1,5 @@
+ID,album_ID,location_ID,member_ID,Title,Description,Privacy,UploadDate,View,ImagePath
+1,1,1,1,Sunset at Beach,Beautiful sunset over sea,Public,2024-01-15,120,/images/goa1.jpg
+2,1,1,2,Family Group Photo,Entire family on beach,Friends,2024-01-16,85,/images/goa2.jpg
+3,2,2,1,Green Pathway,Nature trail in park,Public,2024-02-10,200,/images/park1.jpg
+4,3,3,3,Cake Cutting,Birthday celebration moment,Private,2024-03-05,50,/images/bday1.jpg

@@ -1,0 +1,298 @@
+@baseUrl = http://localhost:4004/odata/v4/catalog
+
+###
+GET {{baseUrl}}/EmployeeSrv
+Accept: application/json
+
+###
+GET {{baseUrl}}/EmployeeSrv(02BD2137-0890-1EEA-A6C2-BB55C19787FB)
+Accept: application/json
+
+###
+POST {{baseUrl}}/createEmployee
+Content-Type: application/json
+
+{
+  "Currency_code": "USD",
+  "ID": "021",
+  "accountNumber": "1234567890",
+  "bankId": "BANK001",
+  "bankName": "ABC Bank",
+  "email": "john@example.com",
+  "gender": "M",
+  "language": "EN",
+  "loginName": "john",
+  "nameFirst": "John",
+  "nameInitials": "J",
+  "nameLast": "Smith",
+  "nameMiddle": "Robert",
+  "phoneNumber": "+14155552671",
+  "salaryAmount": 50000
+}
+
+###
+POST {{baseUrl}}/updateEmployee
+Content-Type: application/json
+
+{
+  "ID": "02BD2137-0890-1EEA-A6C2-BB55C19787FB",
+  "salaryAmount": 75000,
+  "Currency_code": "USD"
+}
+
+###
+POST {{baseUrl}}/deleteEmployee
+Content-Type: application/json
+
+{
+  "ID": "02BD2137-0890-1EEA-A6C2-BB55C19787FB"
+}
+
+###
+GET {{baseUrl}}/BusinessPartnerSrv
+Accept: application/json
+
+###
+POST {{baseUrl}}/createBusinessPartner
+Content-Type: application/json
+
+{
+  "NODE_KEY": "74867AD2-00E4-1EDB-A5D8-B06885664001",
+  "BP_ROLE": "01",
+  "EMAIL": "supplier@example.com",
+  "MOBILE": "+14155552671",
+  "FAX": "123456789",
+  "WEB": "www.example.com",
+  "BP_ID": "74867AD2-00E4-1EDB-A5D8-B06885664002",
+  "COMPANY_NAME": "ABC Company"
+}
+
+###
+GET {{baseUrl}}/AddressSrv
+Accept: application/json
+
+###
+POST {{baseUrl}}/createAddress
+Content-Type: application/json
+
+{
+  "NODE_KEY": "74867AD2-00E4-1EDB-A5D8-B06885664052",
+  "ADDRESS_TYPE": "Business",
+  "VAL_START": "2026-01-01",
+  "VAL_END": "2027-12-31",
+  "LATITUDE": 51.5074,
+  "LONGITUDE": -0.1278,
+  "STREET": "10 Main Street",
+  "POSTAL_CODE": "SW1A1AA",
+  "CITY": "London",
+  "COUNTRY": "GB",
+  "BUILDING": "Building A"
+}
+
+###
+GET {{baseUrl}}/ProductionSrv
+Accept: application/json
+
+###
+GET {{baseUrl}}/ProductionSrv(74867AD2-00E4-1EDB-A5D8-B06885664010)
+Accept: application/json
+
+###
+POST {{baseUrl}}/createProduct
+Content-Type: application/json
+
+{
+  "NODE_KEY": "74867AD2-00E4-1EDB-A5D8-B06885664010",
+  "PRODUCT_ID": "PROD001",
+  "TYPE_CODE": "01",
+  "CATEGORY": "Electronics",
+  "DESCRIPTION": "Laptop",
+  "TAX_TARIF_CODE": 10,
+  "MEASURE_UNIT": "EA",
+  "WEIGHT_MEASURE": 2.50,
+  "WEIGHT_UNIT": "KG",
+  "PRICE": 50000,
+  "CURRENCY_CODE": "USD",
+  "WIDTH": 35.00,
+  "DEPTH": 25.00,
+  "HEIGHT": 2.00,
+  "DIM_UNIT": "CM"
+}
+
+###
+POST {{baseUrl}}/deleteProduct
+Content-Type: application/json
+
+{
+  "NODE_KEY": "74867AD2-00E4-1EDB-A5D8-B06885664010"
+}
+
+###
+GET {{{{baseUrl}}}}/ProductSrv
+Accept: application/json
+
+###
+GET {{baseUrl}}/PurchaseOrderSrv
+Accept: application/json
+
+###
+GET {{baseUrl}}/PurchaseItemSrv
+Accept: application/json
+
+###
+GET {{baseUrl}}/PurchaseItemSrv(74867AD2-00E4-1EDB-A5D8-B0CBD35A0052)
+Accept: application/json
+
+###
+PUT {{baseUrl}}/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+
+{
+  "phoneNumber": "+919409318667"
+}
+
+###
+PUT {{baseUrl}}/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "GROSS_AMOUNT": 50001,
+  "CURRENCY_code": "USD"
+}
+
+###
+PUT {{baseUrl}}/AddressSrv/74867AD200E41EDBA5D8B06885664052
+Content-Type: application/json
+
+{
+  "COUNTRY": "DE"
+}
+
+###
+PUT {{baseUrl}}/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "PO_ITEM_POS": 4
+}
+
+###
+PUT {{baseUrl}}/BusinessPartnerSrv/74867AD200E41EDBA5D8B06885664001
+Content-Type: application/json
+
+{
+  "COMPANY_NAME": "ABC@Company"
+}
+
+###
+PUT {{baseUrl}}/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+
+{
+  "phoneNumber": "+14155552671"
+}
+
+###
+PUT {{baseUrl}}/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+
+{
+  "phoneNumber": "+447911123456"
+}
+
+###
+PUT {{baseUrl}}/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "GROSS_AMOUNT": 50000,
+  "CURRENCY_code": "USD"
+}
+
+###
+PUT {{baseUrl}}/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "GROSS_AMOUNT": 10001,
+  "CURRENCY_code": "EUR"
+}
+
+###
+PUT {{baseUrl}}/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "GROSS_AMOUNT": 10000,
+  "CURRENCY_code": "EUR"
+}
+
+###
+PUT {{baseUrl}}/AddressSrv/74867AD200E41EDBA5D8B06885664052
+Content-Type: application/json
+
+{
+  "COUNTRY": "GB"
+}
+
+###
+PUT {{baseUrl}}/AddressSrv/74867AD200E41EDBA5D8B06885664052
+Content-Type: application/json
+
+{
+  "COUNTRY": "US"
+}
+
+###
+PUT {{baseUrl}}/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "PO_ITEM_POS": 10
+}
+
+###
+PUT {{baseUrl}}/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "PO_ITEM_POS": 20
+}
+
+###
+PUT {{baseUrl}}/BusinessPartnerSrv/74867AD200E41EDBA5D8B06885664001
+Content-Type: application/json
+
+{
+  "COMPANY_NAME": "ABC Company"
+}
+
+GET http://localhost:4004/odata/v4/product/getHeighestPricedProduct()
+
+###
+GET {{baseUrl}}/getHeighestPricedProduct()
+Accept: application/json
+
+###
+POST {{baseUrl}}/ProductionSrv(74867AD2-00E4-1EDB-A5D8-B06885664010)/CatalogService.increasePrice
+Content-Type: application/json
+
+{}
+
+###
+GET {{baseUrl}}/ProductionSrv(74867AD2-00E4-1EDB-A5D8-B06885664010)/CatalogService.top20Products()
+Accept: application/json
+
+###
+POST {{baseUrl}}/EmployeeSrv(021)/CatalogService.increaseSalary
+Content-Type: application/json
+
+{}
+
+###
+GET {{baseUrl}}/EmployeeSrv(021)/CatalogService.top20Employee()
+Accept: application/json
+
+###
+GET {{baseUrl}}/getUtilities
+Accept: application/json
